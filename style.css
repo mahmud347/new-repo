@@ -1,0 +1,199 @@
+/* BookSwap Custom Styles */
+
+/* Book Card Hover Effects */
+.book-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Condition Badges */
+.condition-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.condition-new { 
+    background-color: #10b981; 
+    color: white; 
+}
+
+.condition-good { 
+    background-color: #3b82f6; 
+    color: white; 
+}
+
+.condition-fair { 
+    background-color: #f59e0b; 
+    color: white; 
+}
+
+.condition-poor { 
+    background-color: #ef4444; 
+    color: white; 
+}
+
+/* Upload Preview Area */
+.upload-preview {
+    border: 2px dashed #cbd5e1;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+
+.upload-preview:hover {
+    border-color: #eab308;
+}
+
+/* Price Tag Styling */
+.price-tag {
+    background: linear-gradient(135deg, #fef08a 0%, #fde047 100%);
+    color: #713f12;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Line Clamp for Description */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Truncate Text */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Focus States */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #eab308;
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.1);
+}
+
+/* Button Hover States */
+button {
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Modal Animation */
+#successModal {
+    transition: opacity 0.3s ease;
+}
+
+#successModal:not(.hidden) {
+    opacity: 1;
+}
+
+/* Table Row Hover */
+tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Navigation Link Underline Effect */
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #eab308;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Loading State for Buttons */
+button.loading {
+    position: relative;
+    color: transparent;
+}
+
+button.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Image Preview Container */
+#imagePreview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .book-card:hover {
+        transform: translateY(-2px);
+    }
+    
+    nav a::after {
+        display: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+    
+    main {
+        padding: 0;
+    }
+}

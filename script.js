@@ -4,9 +4,9 @@
 const sampleBooks = [
     {
         "id": 1,
-        "title": "The Great Gatsby",
-        "author": "F. Scott Fitzgerald",
-        "price": 600,
+        "title": "Physics book class 12",
+        "author": "Hamal Bahadur Rayemajhi",
+        "price": 300,
         "condition": "good",
         "conditionLabel": "Good",
         "category": "fiction",
